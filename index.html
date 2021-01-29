@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers App</title>
+  <!-- vue cdn  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- bootstap 4 cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <div id="app" class="container" >
+    <div class="row">
+      <div class="col-12 text-center test" v-for="(question, index) in allQuestions" v-if="index == 0 || index > 0 && allQuestions[index-1].questionAnswer">
+        {{index}}
+
+        <p>{{question.questionTitle}}</p>
+        <p>{{question.questionNum}}</p>
+
+        <label v-for="option in question.options">
+          <input type="radio" v-bind:name="question.questionTitle" v-bind:id="option.index" v-bind:value="option.value" v-model="question.questionAnswer"/>{{option.text}}
+        </label>
+        <br>
+        <h1>Answer: {{question.questionAnswer}}</h1>
+          
+      </div>
+
+
+      <div class="col test" v-for="career in careerFilter" >
+        <h2>{{career.title}}</h2>
+        <ul v-for="info in career.information">
+          <li>{{info.i}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/app.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+</body>
+</html>
