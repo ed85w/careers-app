@@ -32,19 +32,27 @@ var app = new Vue({
         "question1" : "1 2",
         "question2" : "1 2",
         "question3" : "1 2",
+        "information": [
+          "some information about job 1",
+          "some more information about job 1"
+        ]
       },
       {"title": "job2",
         "question1" : "1",
         "question2" : "2",
         "question3" : "2",
+        "information": [
+          "job 2 would be a good job",
+          "you would do lots of maths"
+        ]
       },
       {"title": "job3",
         "question1" : "3",
         "question2" : "2",
         "question3" : "3",
         "information": [
-          {"i": "some info about job 3"},
-          {"i": "some more info about job 3"},
+          "hello",
+          "hello again"
         ]
       },
 

@@ -15,15 +15,13 @@
   <div id="app" class="container" >
     <div class="row">
       <div class="col-12 text-center test" v-for="(question, index) in allQuestions" v-if="index == 0 || index > 0 && allQuestions[index-1].questionAnswer">
-        {{index}}
 
         <p>{{question.questionTitle}}</p>
         <p>{{question.questionNum}}</p>
 
-        <label v-for="option in question.options">
+        <label class="form-option" v-for="option in question.options">
           <input type="radio" v-bind:name="question.questionTitle" v-bind:id="option.index" v-bind:value="option.value" v-model="question.questionAnswer"/>{{option.text}}
         </label>
-        <br>
         <h1>Answer: {{question.questionAnswer}}</h1>
           
       </div>
@@ -32,7 +30,7 @@
       <div class="col test" v-for="career in careerFilter" >
         <h2>{{career.title}}</h2>
         <ul v-for="info in career.information">
-          <li>{{info.i}}</li>
+          <li>{{info}}</li>
         </ul>
       </div>
     </div>
