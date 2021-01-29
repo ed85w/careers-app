@@ -55,13 +55,30 @@ var app = new Vue({
           "hello again"
         ]
       },
+      {"title": "job4",
+        "question1" : "1 2 3",
+        "question2" : "1 2 3",
+        "question3" : "1 2 3",
+        "information": [
+          "job 4!",
+          "job 4 involves physics so would appeal to someone who enjoys physics",
+          "job 4 shows up whatever answers are given"
+        ]
+      },
 
     ]
+  },
+  methods: {
+    showResults: function () {
+      if(this.allQuestions[0].questionAnswer){
+        this.showResults = true;
+      }
+    }
   },
   computed: {
     careerFilter: function () {
       return this.careers.filter(career => career.question1.includes(this.allQuestions[0].questionAnswer) && career.question1.includes(this.allQuestions[1].questionAnswer) && career.question1.includes(this.allQuestions[2].questionAnswer)
         )
-    }
+    },
   }
 })
