@@ -3,6 +3,7 @@ var app = new Vue({
   data: {
     allQuestions: [
       {"questionTitle": "question 1",
+      "questionClass": "inactive",
       "questionAnswer" : "",
       "options" : [
         { text: 'Question 1 option 1', value: '1' },
@@ -11,6 +12,7 @@ var app = new Vue({
         ]
       },
       {"questionTitle": "question 2",
+      "questionClass": "inactive",
       "questionAnswer" : "",
       "options" : [
         { text: 'Question 2 option 1', value: '1' },
@@ -19,6 +21,7 @@ var app = new Vue({
         ]
       },
       {"questionTitle": "question 3",
+      "questionClass": "inactive",
       "questionAnswer" : "",
       "options" : [
         { text: 'question 3 option 1', value: '1' },
@@ -64,21 +67,18 @@ var app = new Vue({
           "job 4 involves physics so would appeal to someone who enjoys physics",
           "job 4 shows up whatever answers are given"
         ]
-      },
-
-    ]
+      }
+    ],
+    quizStarted: false
   },
   methods: {
-    showResults: function () {
-      if(this.allQuestions[0].questionAnswer){
-        this.showResults = true;
-      }
-    }
+    // exampleFunction: function () {
+    //   this.quizStarted = true;
+    //       }
   },
   computed: {
     careerFilter: function () {
-      return this.careers.filter(career => career.question1.includes(this.allQuestions[0].questionAnswer) && career.question1.includes(this.allQuestions[1].questionAnswer) && career.question1.includes(this.allQuestions[2].questionAnswer)
-        )
-    },
+      return this.careers.filter(career => career.question1.includes(this.allQuestions[0].questionAnswer) && career.question1.includes(this.allQuestions[1].questionAnswer) && career.question1.includes(this.allQuestions[2].questionAnswer));
+    }
   }
 })

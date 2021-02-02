@@ -2,6 +2,25 @@
   border: 1px solid red;
 }
 
+.container {
+  overflow: hidden;
+}
+
+.start-container,
+.question-container {
+  position: relative;
+  transition: 1s ease;
+}
+
+.inactive {
+  left: 100%;
+}
+
+.done {
+  left: -100%;
+  transition: left 1s ease;
+}
+
 .form-option {
   display: block;
 }

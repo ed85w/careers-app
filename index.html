@@ -14,7 +14,16 @@
 
   <div id="app" class="container" >
     <div class="row">
-      <div class="col-12 text-center test" v-for="(question, index) in allQuestions" v-if="index == 0 || index > 0 && allQuestions[index-1].questionAnswer">
+      <!-- starting menu/container  -->
+      <!-- <div class="col-12 start-container" v-bind:class="{ done: quizStarted }"> -->
+      <div class="col-12 start-container">
+        <h1>Start App</h1>
+        <button v-on:click="quizStarted = !quizStarted">General</button>
+      </div>
+
+      <!-- questions  -->
+      <div class="col-12 text-center question-container test" v-for="(question, index) in allQuestions" v-if="index == 0 || index > 0 && allQuestions[index-1].questionAnswer">
+      <!-- <div class="col-12 text-center question-container inactive test"  v-for="(question, index) in allQuestions" v-bind:class="{ inactive: !allQuestions[1].questionAnswer }">  -->
         <h1>{{question.questionTitle}}</h1>
         <label class="form-option" v-for="option in question.options">
           <input type="radio" v-bind:name="question.questionTitle" v-bind:id="option.index" v-bind:value="option.value" v-model="question.questionAnswer"/>{{option.text}}
