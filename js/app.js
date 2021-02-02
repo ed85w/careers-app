@@ -69,12 +69,28 @@ var app = new Vue({
         ]
       }
     ],
-    quizStarted: false
+    quizStarted: false,
+    quizClass: "inactive"
   },
   methods: {
-    // exampleFunction: function () {
-    //   this.quizStarted = true;
-    //       }
+    quizStart: function(){
+      this.allQuestions[0].questionClass = "active"
+      this.quizStarted = true
+    },
+    nextQuestion: function(index){
+      this.allQuestions[index].questionClass = "done"
+      this.allQuestions[index + 1].questionClass = "active"
+    },
+    prevQuestion: function(index) {
+      // if 1st question 
+      if(index == 0) {
+        this.allQuestions[index].questionClass = "inactive"
+        this.quizStarted = false
+      } else {
+        this.allQuestions[index].questionClass = "inactive"
+        this.allQuestions[index - 1].questionClass = "active"
+      }
+    }
   },
   computed: {
     careerFilter: function () {
