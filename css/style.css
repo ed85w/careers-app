@@ -31,3 +31,8 @@
 .form-option {
   display: block;
 }
+
+/* radio buttons  */
+input[type=checkbox], input[type=radio] {
+  margin: 5px;
+}
