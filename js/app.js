@@ -2,18 +2,20 @@ var app = new Vue({
   el: '#app',
   data: {
     allQuestions: [
-      {"questionTitle": "question 1",
+      {"questionTitle": "What is your preferred working environment?",
       "questionClass": "inactive",
-      "questionAnswer" : "",
+      "questionAnswerValue" : "",
+      "questionAnswerText" : "",
       "options" : [
-        { text: 'Question 1 option 1', value: '1' },
-        { text: 'Question 1 option 2', value: '2' },
-        { text: 'Question 1 option 3', value: '3' }
+        { text: 'Office-based', value: '1' },
+        { text: 'Laboratory/Scientific Facility', value: '2' },
+        { text: 'Out & About (e.g. field-work, travel, outdoors)', value: '3' }
         ]
       },
       {"questionTitle": "question 2",
       "questionClass": "inactive",
-      "questionAnswer" : "",
+      "questionAnswerValue" : "",
+      "questionAnswerText" : "",
       "options" : [
         { text: 'Question 2 option 1', value: '1' },
         { text: 'Question 2 option 2', value: '2' },
@@ -22,7 +24,8 @@ var app = new Vue({
       },
       {"questionTitle": "question 3",
       "questionClass": "inactive",
-      "questionAnswer" : "",
+      "questionAnswerValue" : "",
+      "questionAnswerText" : "",
       "options" : [
         { text: 'question 3 option 1', value: '1' },
         { text: 'question 3 option 2', value: '2' },
@@ -113,11 +116,15 @@ var app = new Vue({
         this.allQuestions[index].questionClass = "inactive"
         this.allQuestions[index - 1].questionClass = "active"
       }
+    },
+    // assigns the text version of each answer to the relevant question 
+    setAnswerText: function(val, index) {
+      this.allQuestions[index].questionAnswerText = val.srcElement.nextSibling.data
     }
   },
   computed: {
     careerFilter: function () {
-      return this.careers.filter(career => career.question1.includes(this.allQuestions[0].questionAnswer) && career.question1.includes(this.allQuestions[1].questionAnswer) && career.question1.includes(this.allQuestions[2].questionAnswer));
+      return this.careers.filter(career => career.question1.includes(this.allQuestions[0].questionAnswerValue) && career.question1.includes(this.allQuestions[1].questionAnswerValue) && career.question1.includes(this.allQuestions[2].questionAnswerValue));
     }
   }
 })
