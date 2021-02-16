@@ -43,11 +43,11 @@
     </div>
     <div class="row">
       <!-- results - shows if all questions have been answered  -->
-      <div class="col-3 test" v-for="career in careerFilter" v-if="allQuestions.every(qu => qu.questionAnswer) && quizStarted">
+      <div class="col-3 result-div test" v-for="career in careerFilter" v-if="allQuestions.every(qu => qu.questionAnswer) && quizStarted">
         <h2>{{career.title}}</h2>
-        <ul v-for="info in career.information">
+        <!-- <ul v-for="info in career.information">
           <li>{{info}}</li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </div>

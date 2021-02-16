@@ -65,9 +65,32 @@ var app = new Vue({
         "information": [
           "job 4!",
           "job 4 involves physics so would appeal to someone who enjoys physics",
-          "job 4 shows up whatever answers are given"
         ]
-      }
+      },
+      {"title": "job5",
+        "question1" : "3",
+        "question2" : "1 3",
+        "question3" : "1 2 3",
+        "information": [
+          "job 5!",
+        ]
+      },
+      {"title": "job6",
+        "question1" : "1",
+        "question2" : "2",
+        "question3" : "3",
+        "information": [
+          "job 6!",
+        ]
+      },
+      {"title": "job7",
+        "question1" : "3",
+        "question2" : "2 3",
+        "question3" : "1 2 3",
+        "information": [
+          "job 7!",
+        ]
+      },
     ],
     quizStarted: false,
     quizClass: "inactive"
