@@ -47,8 +47,7 @@ var app = new Vue({
         "question2" : "1",
         "question3" : "1",
         "information": [
-          "job 2 would be a good job",
-          "you would do lots of maths"
+          "Metallurgist info",
         ]
       },
       {"title": "Applications Developer",
@@ -56,7 +55,7 @@ var app = new Vue({
         "question2" : "1",
         "question3" : "2",
         "information": [
-          "hello",
+          "Applications Developer info",
           "hello again"
         ]
       },
@@ -65,7 +64,7 @@ var app = new Vue({
         "question2" : "1",
         "question3" : "2",
         "information": [
-          "job 4!",
+          "Data Analyst",
           "job 4 involves physics so would appeal to someone who enjoys physics",
         ]
       },
@@ -74,7 +73,7 @@ var app = new Vue({
       "question2" : "1",
       "question3" : "2",
         "information": [
-          "job 5!",
+          "Financial Quantitative Analyst",
         ]
       },
       {"title": "Geophysicist",
@@ -82,7 +81,7 @@ var app = new Vue({
         "question2" : "1",
         "question3" : "1",
         "information": [
-          "job 6!",
+          "Geophysicist",
         ]
       },
       {"title": "Meteorologist",
@@ -90,7 +89,7 @@ var app = new Vue({
         "question2" : "1",
         "question3" : "1",
         "information": [
-          "job 7!",
+          "Meteorologist",
         ]
       },
       {"title": "Royal Air Force Airperson",
@@ -98,7 +97,7 @@ var app = new Vue({
         "question2" : "2",
         "question3" : "3",
         "information": [
-          "job 7!",
+          "Royal Air Force Airperson",
         ]
       },
     ],
