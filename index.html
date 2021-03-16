@@ -44,7 +44,7 @@
     <div class="row">
       <!-- results - shows if all questions have been answered  -->
       <div class="col-3 result-div test" v-for="career in careerFilter" v-if="allQuestions.every(qu => qu.questionAnswerValue) && quizStarted">
-        <h2>{{career.title}}</h2>
+        <h5>{{career.title}}</h5>
       </div>
     </div>
   </div>
