@@ -40,7 +40,8 @@ var app = new Vue({
         "information": [
           "some information about Nuclear Engineer",
           "some more information about Nuclear Engineer"
-        ]
+        ],
+        "link": "https://docs.google.com/document/d/1-1eH7S-fRLX68XvpFSqB1y2XbrqJExqE1nXD-5nWSqQ"
       },
       {"title": "Metallurgist",
         "question1" : "2",
@@ -48,7 +49,8 @@ var app = new Vue({
         "question3" : "1",
         "information": [
           "Metallurgist info",
-        ]
+        ],
+        "link": "../metallurgist.html"
       },
       {"title": "Applications Developer",
         "question1" : "1",
@@ -57,7 +59,8 @@ var app = new Vue({
         "information": [
           "Applications Developer info",
           "hello again"
-        ]
+        ],
+        "link": "https://docs.google.com/document/d/1vrh-yDQVkBtyM5odgiVq3rlN0jwyZc0F6P846HBBtzg"
       },
       {"title": "Data Analyst",
         "question1" : "1",
@@ -131,6 +134,18 @@ var app = new Vue({
   computed: {
     careerFilter: function () {
       return this.careers.filter(career => career.question1.includes(this.allQuestions[0].questionAnswerValue) && career.question2.includes(this.allQuestions[1].questionAnswerValue) && career.question3.includes(this.allQuestions[2].questionAnswerValue));
+    },
+    // resetQuiz: function(){
+    //   if(!this.quizStarted) {
+    //     this.allQuestions.forEach(qu => qu.questionAnswerValue = "")
+    //   }
+    // }
+  },
+  watch: {
+    resetQuiz: function(quizStarted){
+      if(this.quizStarted == false) {
+        this.allQuestions.forEach(qu => qu.questionAnswerValue = "")
+      }
     }
   }
 })

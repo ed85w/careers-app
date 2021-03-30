@@ -14,9 +14,19 @@
 <body>
 
   <div id="app" class="container" >
-    <div class="row questions-container">
+    <div class="row questions-container" v-bind:class="{ smaller: quizStarted }">
       <!-- starting menu/container  -->
       <div class="col-12 text-center start-container" v-bind:class="{ done: quizStarted }">
+        <h1>Careers in Physics and Beyond</h1>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 pt-3">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l9vdnPD5MBM" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
         <h1 class="pt-5">Start Quiz</h1>
         <button v-on:click="quizStart">General</button>
       </div>
@@ -44,7 +54,7 @@
     <div class="row">
       <!-- results - shows if all questions have been answered  -->
       <div class="col-3 result-div test" v-for="career in careerFilter" v-if="allQuestions.every(qu => qu.questionAnswerValue) && quizStarted">
-        <h5>{{career.title}}</h5>
+        <a v-bind:href="career.link" target="_blank"><h5>{{career.title}}</h5></a>
       </div>
     </div>
   </div>

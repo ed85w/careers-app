@@ -8,16 +8,27 @@
 
 .questions-container {
   position: relative;
+  height: 500px;
+}
+
+.questions-container.smaller {
   height: 300px;
 }
 
 .start-container,
 .question-container {
   position: absolute;
-  height: 300px;
   left: 0;
   top: 0;
   transition: 1s ease;
+}
+
+.start-container {
+  height: 600px;
+}
+
+.question-container {
+  height: 300px;
 }
 
 .inactive {
@@ -42,4 +53,8 @@ input[type=checkbox], input[type=radio] {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.embed-responsive {
+  max-height: 300px;
 }
