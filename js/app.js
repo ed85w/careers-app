@@ -50,7 +50,7 @@ var app = new Vue({
         "information": [
           "Metallurgist info",
         ],
-        "link": "/metallurgist.html"
+        "link": "careers-app/metallurgist.html"
       },
       {"title": "Applications Developer",
         "question1" : "1",
