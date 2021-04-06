@@ -32,7 +32,7 @@ p {
   margin: 0;
 }
 
-li {
+li, label {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
@@ -115,8 +115,12 @@ li {
 /* buttons  */
 .ca-button {
   font-family: 'Franklin Gothic Demi Cond';
-  padding: 10px 60px;
+  padding: 10px;
   background: #c4c4c4;
+}
+
+.ca-button-start {
+  width: 100%;
 }
 
 .ca-button-prev,
