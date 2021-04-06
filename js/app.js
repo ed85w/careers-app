@@ -21,7 +21,7 @@ var app = new Vue({
       },
       {
         "questionHeader": "Team Size",
-        "questionImg": "team-size.jpg",
+        "questionImg": "./team-size.jpg",
         "questionImgAlt": "TBC",
         "questionTitle": "What size team do you prefer to work in?",
         "questionClass": "inactive",
@@ -69,7 +69,7 @@ var app = new Vue({
         "question2" : "1",
         "question3" : "2",
         "link": "./applications-developer.html",
-        "img": ".img/applications-developer.png",
+        "img": "./applications-developer.png",
         "imgAlt": "image of a laptop"
       },
       {"title": "Data Analyst",
