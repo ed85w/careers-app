@@ -99,7 +99,7 @@
           <div class="col-6 col-md-3 ca-result-div" v-for="career in careerFilter"  >
             <div class="ca-results-image-container">
               <a class="ca-career-link" v-bind:href="career.link" target="_blank">
-                <img class="ca-career-image" :src="'/img/' + career.img" v-bind:alt="career.imgAlt">
+                <img class="ca-career-image" :src="'./img/' + career.img" v-bind:alt="career.imgAlt">
                 <h5 class="ca-career-title">{{career.title}}</h5>
               </a>
             </div>
