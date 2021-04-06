@@ -52,9 +52,9 @@ var app = new Vue({
         "question1" : "1",
         "question2" : "2",
         "question3" : "1",
-        "link": "https://docs.google.com/document/d/1-1eH7S-fRLX68XvpFSqB1y2XbrqJExqE1nXD-5nWSqQ",
-        "img": "",
-        "imgAlt": "TO ENTER"
+        "link": "./nuclear-engineer.html",
+        "img": "nuclear-engineer.png",
+        "imgAlt": "image of a laptop"
       },
       {"title": "Metallurgist",
         "question1" : "2",
@@ -150,10 +150,10 @@ var app = new Vue({
     window.removeEventListener("resize", this.setContainerHeight);
   },
   watch: {
-    resetQuiz: function(quizStarted){
-      if(this.quizStarted == false) {
-        this.allQuestions.forEach(qu => qu.questionAnswerValue = "")
+    quizStarted: function(val) {
+      if (val == false){
+        this.allQuestions.forEach(e => e.questionAnswerValue = "");
       }
-    },
+    }
   }
 })
