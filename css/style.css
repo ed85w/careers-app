@@ -7,6 +7,10 @@
   src: url('../fonts/ITC\ Franklin\ Gothic\ Demi\ Compressed.woff2') format('woff2');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,h2,h3,h4,h5 {
   font-family: 'Franklin Gothic Demi Cond';
   line-height: 1;
@@ -70,7 +74,7 @@ li, label {
 
 .ca-question-img {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -168,6 +172,10 @@ input[type=checkbox], input[type=radio] {
   width: 100%;
 }
 
+.ca-career-link:focus-within {
+  border: 2px solid red;
+}
+
 .ca-career-image {
   width: 100%;
   height: 100%;
@@ -177,18 +185,21 @@ input[type=checkbox], input[type=radio] {
   transition: 0.2s ease;
 }
 
+.b-and-w {
+  filter: grayscale(100%);
+}
+
 .ca-results-image-container:hover .ca-career-image {
   transform: scale(1.1);
 }
 
 
-h5.ca-career-title {
+h4.ca-career-title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color:black;
-  background: #c4c4c4;
+  color:white;
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -199,8 +210,16 @@ h5.ca-career-title {
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
+  .ca-question-img {
+    height: 250px;
+  }
+
   .ca-questions-container {
     height: 410px;
+  }
+
+  .ca-button-start {
+    width: 50%;
   }
 
   .ca-button-prev,

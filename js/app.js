@@ -54,7 +54,7 @@ var app = new Vue({
         "question3" : "1",
         "link": "./nuclear-engineer.html",
         "img": "nuclear-engineer.png",
-        "imgAlt": "image of a laptop"
+        "imgAlt": "image of a woman working at a machine"
       },
       {"title": "Metallurgist",
         "question1" : "2",
@@ -62,7 +62,7 @@ var app = new Vue({
         "question3" : "1",
         "link": "./metallurgist.html",
         "img": "metallurgist.png",
-        "imgAlt": "TO ENTER"
+        "imgAlt": "image of a metallurgist"
       },
       {"title": "Applications Developer",
         "question1" : "1",
@@ -76,9 +76,9 @@ var app = new Vue({
         "question1" : "1",
         "question2" : "1",
         "question3" : "2",
-        "link": "./metallurgist.html",
-        "img": "./metallurgist.html",
-        "imgAlt": "TO ENTER"
+        "link": "./data-analyst.html",
+        "img": "applications-developer.png",
+        "imgAlt": "image of a laptop"
       },
       {"title": "Financial Quantitative Analyst",
       "question1" : "1",

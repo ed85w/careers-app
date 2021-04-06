@@ -101,10 +101,10 @@
       <div class="col-12" v-if="careerFilter.length > 0">
         <div class="row m-0">
           <div class="col-6 col-md-3 ca-result-div" v-for="career in careerFilter"  >
-            <div class="ca-results-image-container">
-              <a class="ca-career-link" v-bind:href="career.link" target="_blank">
+            <div class="ca-results-image-container text-center">
+              <a class="ca-career-link" v-bind:href="career.link" target="_blank" tabindex="1">
                 <img class="ca-career-image" :src="'./img/' + career.img" v-bind:alt="career.imgAlt">
-                <h5 class="ca-career-title">{{career.title}}</h5>
+                <h4 class="ca-career-title">{{career.title}}</h4>
               </a>
             </div>
           </div>
