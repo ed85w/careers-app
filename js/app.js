@@ -69,7 +69,7 @@ var app = new Vue({
         "question2" : "1",
         "question3" : "2",
         "link": "./applications-developer.html",
-        "img": "./applications-developer.png",
+        "img": ".img/applications-developer.png",
         "imgAlt": "image of a laptop"
       },
       {"title": "Data Analyst",
