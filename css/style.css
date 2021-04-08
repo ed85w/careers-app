@@ -45,6 +45,14 @@ li, label {
   max-height: 300px;
 }
 
+.ca-video-embed {
+  position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    max-width: 100%;
+}
+
 .ca-container {
   position: absolute;
   top: 0;
@@ -99,7 +107,6 @@ li, label {
 .ca-question-circle.active {
   border: 2px solid black;
 }
-
 
 .ca-question-text-container {
   display: flex;
