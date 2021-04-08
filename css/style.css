@@ -92,7 +92,7 @@ li, label {
   width: 30px;
   margin: 5px;
   border-radius: 50%;
-  background: #BA8748;
+  background: #c4c4c4;
   color: black;
 }
 
@@ -141,6 +141,7 @@ li, label {
 /* radio buttons  */
 input[type=checkbox], input[type=radio] {
   margin: 5px;
+  margin-right: 15px;
 }
 
 /* results  */
