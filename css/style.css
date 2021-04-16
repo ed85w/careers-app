@@ -70,7 +70,8 @@ li, label {
 }
 
 .ca-questions-container {
-  height: 670px;
+  /* height: 670px; */
+  max-width: 100%;
 }
 
 .ca-start-container,
@@ -246,20 +247,11 @@ h4.ca-career-title {
   .ca-questions-row,
   .ca-questions-container {
     height: 80vh;
-    min-height: 600px;
   }
-
-  /* .ca-question-img {
-    height: 250px;
-  } */
 
   .ca-container {
    background-size: 30%;
   }
-
-  /* .ca-questions-container {
-    height: 410px;
-  } */
 
   .ca-button-start {
     width: 50%;

@@ -14,6 +14,8 @@
 <body>
 
   <div id="app" class="ca-container" >
+
+    <!-- landing and questions container  -->
     <div class="row ca-questions-container" v-bind:style="{ height: questionsContainerHeight + 'px' }">
       <!-- starting menu/container  -->
       <div class="col-12 p-0 ca-start-container" v-bind:class="{ done: quizStarted }">
@@ -66,7 +68,7 @@
             </div>
           </div>
           <!-- question and checkboxes  -->
-          <div class="col-12 col-lg-7 order-lg-1 pt-lg-3 text-left ca-question-text-container">
+          <div class="col-12 col-lg-5 offset-lg-1 order-lg-1 pt-lg-3 text-left ca-question-text-container">
             <!-- question text  -->
             <div class="row">
               <div class="col-12">
@@ -94,12 +96,13 @@
         </div>
       </div>
     </div>
+
     <!-- results - shows if all questions have been answered  -->
     <div class="row ca-results-row ca-max-width" v-if="allQuestions.every(qu => qu.questionAnswerValue) && quizStarted">
-      <div class="col-12 pt-4 pb-3">
+      <div class="col-12 col-lg-10 offset-lg-1 pt-4 pb-3">
         <h3 id="matches" class="pl-md-3">Your Job Matches</h3>
       </div>
-      <div class="col-12 pl-2 pr-2" v-if="careerFilter.length > 0">
+      <div class="col-12 col-lg-10 offset-lg-1 pl-2 pr-2" v-if="careerFilter.length > 0">
         <div class="row m-0">
           <div class="col-6 col-lg-3 ca-result-div" v-for="career in careerFilter"  >
             <div class="ca-results-image-container text-center">
@@ -116,6 +119,7 @@
         <h4 class="pl-3">No matches found...</h4>
       </div>
     </div>
+
   </div>
   
   <script src="./js/app.js"></script>

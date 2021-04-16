@@ -7,8 +7,8 @@ var app = new Vue({
     allQuestions: [
       {
         "questionHeader": "Working Environment",
-        "questionImg": "working-environment.jpg",
-        "questionImgAlt": "A picture of a man working at a desk",
+        "questionImg": "environment.jpg",
+        "questionImgAlt": "A picture of scientists working in a lab",
         "questionTitle": "What’s your ideal work environment?",
         "questionClass": "inactive",
         "questionAnswerValue" : "",
@@ -21,8 +21,8 @@ var app = new Vue({
       },
       {
         "questionHeader": "Team Size",
-        "questionImg": "./team-size.jpg",
-        "questionImgAlt": "TBC",
+        "questionImg": "./team.jpg",
+        "questionImgAlt": "picture of a teams hands",
         "questionTitle": "What size team do you prefer to work in?",
         "questionClass": "inactive",
         "questionAnswerValue" : "",
@@ -34,8 +34,8 @@ var app = new Vue({
       },
       {
         "questionHeader": "Job Skills",
-        "questionImg": "team-size.jpg",
-        "questionImgAlt": "TBC",
+        "questionImg": "coding.jpg",
+        "questionImgAlt": "a picture of a laptop and python book",
         "questionTitle": "In your job, do you mostly want to use your...",
         "questionClass": "inactive",
         "questionAnswerValue" : "",
@@ -122,6 +122,7 @@ var app = new Vue({
     nextQuestion: function(index){
       this.allQuestions[index].questionClass = "done";
       this.allQuestions[index + 1].questionClass = "active";
+      this.setContainerHeight();
     },
     prevQuestion: function(index) {
       // if 1st question 
@@ -137,6 +138,14 @@ var app = new Vue({
     setAnswerText: function(val, index) {
       this.allQuestions[index].questionAnswerText = val.srcElement.nextSibling.data
     },
+    setContainerHeight: function(){
+      if(document.querySelector('.ca-question-container.active')){
+        const requiredHeight = document.querySelector('.ca-question-container.active').offsetHeight;
+        console.log(requiredHeight);
+        this.questionsContainerHeight = requiredHeight;
+      }
+      
+    }
   },
   computed: {
     careerFilter: function () {
