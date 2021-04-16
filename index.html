@@ -17,21 +17,22 @@
     <div class="row ca-questions-container" v-bind:style="{ height: questionsContainerHeight + 'px' }">
       <!-- starting menu/container  -->
       <div class="col-12 p-0 ca-start-container" v-bind:class="{ done: quizStarted }">
-        <div class="row ca-max-width">
-          <div class="col-12 pt-3 pb-3 pb-md-5 text-center">
+        <div class="row ca-questions-row ca-max-width pl-md-5 pr-md-5">
+          <div class="col-12 pt-3 pb-3 pb-lg-5 text-center">
             <h2>Careers in Physics and Beyond</h2>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-lg-6">
             <p class="pb-3">Not sure what you can do with your physics degree?</p>
             <p class="pb-3">Use our Career Compass to discover more!</p>
-            <p>Explore all the different paths a Physics degree opens once you graduate. From Physics focused research to the healthcare industry, finance, uniform services and everything in between.</p>
+            <p class="pb-3">Explore all the different paths a Physics degree opens once you graduate. From Physics focused research to the healthcare industry, finance, uniform services and everything in between.</p>
+            <h3 class="pb-3">1. Watch the Video</h3>
             <div class="embed-responsive embed-responsive-16by9 mt-3 mb-3">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l9vdnPD5MBM" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
-          <div class="col-12 col-md-6 d-flex align-items-center">
+          <div class="col-12 col-lg-6 d-flex align-items-center">
             <div class="ca-content-container">
-              <h3 class="pb-3">How it Works</h3>
+              <h3 class="pb-3">2. How it Works</h3>
               <p class="pb-3">The Career Compass uses a tree structure containing 3 questions designed to begin your thought process on what you would like your ideal career/job to have. Don't forget that if your unsure about your preferences or like more than one option, you can always click back to change your answers and see a different list of careers.</p>
               <button class="ca-button ca-button-start" v-on:click="quizStart">Start Quiz</button>
             </div>
@@ -44,13 +45,13 @@
 
       <!-- questions  -->
       <div class="col-12 p-0 text-center ca-question-container"  v-for="(question, index) in allQuestions" v-bind:class="question.questionClass">
-        <div class="row ca-max-width">
+        <div class="row ca-max-width ca-questions-row">
           <!-- header  -->
-          <div class="col-12 pt-3 pb-3 pb-md-5 text-center">
+          <div class="col-12 pt-3 pb-3 pb-lg-5 text-center">
             <h2>{{question.questionHeader}}</h2>
           </div>
           <!-- image and circles  -->
-          <div class="col-12 pt-3 col-md-5 order-md-2">
+          <div class="col-12 pt-3 col-lg-5 order-lg-2">
             <div class="row">
               <div class="col-12">
                 <img class="ca-question-img"  :src="'./img/' + question.questionImg" v-bind:alt="question.questionImgAlt" >
@@ -65,7 +66,7 @@
             </div>
           </div>
           <!-- question and checkboxes  -->
-          <div class="col-12 col-md-7 order-md-1 pt-md-3 text-left ca-question-text-container">
+          <div class="col-12 col-lg-7 order-lg-1 pt-lg-3 text-left ca-question-text-container">
             <!-- question text  -->
             <div class="row">
               <div class="col-12">
@@ -95,12 +96,12 @@
     </div>
     <!-- results - shows if all questions have been answered  -->
     <div class="row ca-results-row ca-max-width" v-if="allQuestions.every(qu => qu.questionAnswerValue) && quizStarted">
-      <div class="col-12 pt-3 pb-3">
-        <h3 id="matches" class="pl-3">Your Job Matches</h3>
+      <div class="col-12 pt-4 pb-3">
+        <h3 id="matches" class="pl-md-3">Your Job Matches</h3>
       </div>
-      <div class="col-12" v-if="careerFilter.length > 0">
+      <div class="col-12 pl-2 pr-2" v-if="careerFilter.length > 0">
         <div class="row m-0">
-          <div class="col-6 col-md-3 ca-result-div" v-for="career in careerFilter"  >
+          <div class="col-6 col-lg-3 ca-result-div" v-for="career in careerFilter"  >
             <div class="ca-results-image-container text-center">
               <a class="ca-career-link" v-bind:href="career.link" target="_blank" tabindex="1">
                 <img class="ca-career-image" :src="'./img/' + career.img" v-bind:alt="career.imgAlt">
