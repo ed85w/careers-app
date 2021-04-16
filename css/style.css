@@ -18,6 +18,15 @@ h1,h2,h3,h4,h5 {
   color: white;
 }
 
+.ca-results-page h1,
+.ca-results-page h2,
+.ca-results-page h3,
+.ca-results-page h4,
+.ca-results-page h5, 
+.ca-results-page p {
+  color: black;
+}
+
 h1 {
   font-size: 40px;
 }
