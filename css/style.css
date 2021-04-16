@@ -244,11 +244,6 @@ h4.ca-career-title {
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
-  .ca-questions-row,
-  .ca-questions-container {
-    height: 80vh;
-  }
-
   .ca-container {
    background-size: 30%;
   }

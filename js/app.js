@@ -141,7 +141,7 @@ var app = new Vue({
     setContainerHeight: function(){
       if(document.querySelector('.ca-question-container.active')){
         const requiredHeight = document.querySelector('.ca-question-container.active').offsetHeight;
-        console.log(requiredHeight);
+        // console.log(requiredHeight);
         this.questionsContainerHeight = requiredHeight;
       }
       
