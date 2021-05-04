@@ -1,5 +1,5 @@
 var app = new Vue({
-  el: '#app',
+  el: '#ca-app',
   data: {
     quizStarted: false,
     quizClass: "inactive",

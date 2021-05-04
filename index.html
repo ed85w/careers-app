@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- security headers  -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src https, localhost:"> -->
+  <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+
   <title>Careers App</title>
   <!-- vue cdn  -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <!-- bootstap 4 cdn -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- custom css  -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/careers-app.css">
 </head>
 <body>
 
-  <div id="app" class="ca-container" >
+  <div id="ca-app" class="ca-container" >
 
     <!-- landing and questions container  -->
     <div class="row ca-questions-container" v-bind:style="{ height: questionsContainerHeight + 'px' }">
